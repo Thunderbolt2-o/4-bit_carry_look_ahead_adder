@@ -67,7 +67,7 @@ The equations of propagate, generate, sum and carry signal are going to repeat f
 ## CMOS NOT Gate
 
 <p align="Center">
-  <img src="files/and gate.JPG" width="700" height="500" /><br />
+  <img src="files/not.png" width="700" height="500" /><br />
   NOT GATE SCHEMATIC<br />
   
 </p>
