@@ -67,7 +67,7 @@ The equations of propagate, generate, sum and carry signal are going to repeat f
 ## CMOS NOT Gate
 
 <p align="Center">
-  <img src="files/not.png" width="700" height="500" /><br />
+  <img src="files/not.png" width="400" height="400" /><br />
   NOT GATE SCHEMATIC<br />
   
 </p>
@@ -177,8 +177,8 @@ These Partial products are passed to next layer for reduction. This layer uses o
 
 ## Simulations
 <p align="center">
-<img width="1000"
-     height="700"
+<img width="500"
+     height="500"
   src="files/tb end.png"><br />
   Test bench for CLA Adder
 </p>
