@@ -1,0 +1,232 @@
+*  Generated for: PrimeSim
+*  Design library name: hackathon
+*  Design cell name: CLA_4bit_g_tb
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Mon Feb 28 12:45:12 2022
+
+.global gnd!
+********************************************************************************
+* Library          : hackathon
+* Cell             : nand_g
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt nand_g a b gnd_1 nand_g vdd
+xm1 nand_g b vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+xm0 nand_g a vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+xm3 net13 b gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm2 nand_g a net13 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+.ends nand_g
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : xor_g
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt xor_g d_a_x d_b_x gnd_1 vdd xor_g
+xi3 net19 net20 gnd_1 xor_g vdd nand_g
+xi2 d_b_x net9 gnd_1 net19 vdd nand_g
+xi1 net9 d_a_x gnd_1 net20 vdd nand_g
+xi0 d_b_x d_a_x gnd_1 net9 vdd nand_g
+.ends xor_g
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : inv
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inv gnd_1 input not vdd
+xm6 not input gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm5 not input vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+.ends inv
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : and_g
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt and_g a b gnd_1 vdd and_g
+xi0 a b gnd_1 net9 vdd nand_g
+xi1 gnd_1 net9 and_g vdd inv
+.ends and_g
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : halfadder_u
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt halfadder_u gnd_1 vdd carry_in carry_out input sum_out
+xi0 input carry_in gnd_1 vdd sum_out xor_g
+xi1 input carry_in gnd_1 vdd carry_out and_g
+.ends halfadder_u
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : or_g
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt or_g a b gnd_1 or_gate vdd
+xi2 net14 net15 gnd_1 or_gate vdd nand_g
+xi1 b b gnd_1 net15 vdd nand_g
+xi0 a a gnd_1 net14 vdd nand_g
+.ends or_g
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : fulladder_g
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt fulladder_g a b carry_in gnd_1 vdd carry_f sum_f
+xi1 gnd_1 vdd net11 net17 carry_in sum_f halfadder_u
+xi0 gnd_1 vdd a net16 b net11 halfadder_u
+xi2 net16 net17 gnd_1 carry_f vdd or_g
+.ends fulladder_g
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : CLA_4bit_g_first_u
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt cla_4bit_g_first_u a0 b0 c0 c1 gnd_1 vdd
+xi1 a0 b0 gnd_1 vdd net19 and_g
+xi0 c0 net11 gnd_1 vdd net20 and_g
+xi2 a0 b0 gnd_1 vdd net11 xor_g
+xi3 net19 net20 gnd_1 c1 vdd or_g
+.ends cla_4bit_g_first_u
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : CLA_4bit_g_second_u
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt cla_4bit_g_second_u a0 a1 b0 b1 c0 c2 gnd_1 vdd
+xi0 a0 b0 c0 net21 gnd_1 vdd cla_4bit_g_first_u
+xi1 a1 b1 gnd_1 vdd net20 xor_g
+xi3 net20 net21 gnd_1 vdd net26 and_g
+xi2 a1 b1 gnd_1 vdd net25 and_g
+xi4 net25 net26 gnd_1 c2 vdd or_g
+.ends cla_4bit_g_second_u
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : CLA_4bit_g_third_u
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt cla_4bit_g_third_u a0 a1 a2 b0 b1 b2 c0 c3 gnd_1 vdd
+xi0 a0 a1 b0 b1 c0 net18 gnd_1 vdd cla_4bit_g_second_u
+xi2 net19 net18 gnd_1 vdd net27 and_g
+xi1 a2 b2 gnd_1 vdd net28 and_g
+xi3 a2 b2 gnd_1 vdd net19 xor_g
+xi4 net27 net28 gnd_1 c3 vdd or_g
+.ends cla_4bit_g_third_u
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : CLA_4bit_g_fourth_u
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt cla_4bit_g_fourth_u a0 a1 a2 a3 b0 b1 b2 b3 c0 c4 gnd_1 vdd
+xi0 a0 a1 a2 b0 b1 b2 c0 net14 gnd_1 vdd cla_4bit_g_third_u
+xi2 a3 b3 gnd_1 vdd net30 and_g
+xi1 net14 net21 gnd_1 vdd net29 and_g
+xi3 a3 b3 gnd_1 vdd net21 xor_g
+xi4 net29 net30 gnd_1 c4 vdd or_g
+.ends cla_4bit_g_fourth_u
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : CLA_4bit_g
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt cla_4bit_g a0 a1 a2 a3 b0 b1 b2 b3 c0 c0u c1u c2u c3u c4 gnd_1 s0 s1 s2
++ s3 vdd
+xi10 a0 b0 c0 gnd_1 vdd c0u s0 fulladder_g
+xi9 b3 a3 net83 gnd_1 vdd c3u s3 fulladder_g
+xi8 a2 b2 net75 gnd_1 vdd c2u s2 fulladder_g
+xi7 a1 b1 net69 gnd_1 vdd c1u s1 fulladder_g
+xi11 a0 b0 c0 net69 gnd_1 vdd cla_4bit_g_first_u
+xi12 a0 a1 b0 b1 c0 net75 gnd_1 vdd cla_4bit_g_second_u
+xi13 a0 a1 a2 b0 b1 b2 c0 net83 gnd_1 vdd cla_4bit_g_third_u
+xi14 a0 a1 a2 a3 b0 b1 b2 b3 c0 c4 gnd_1 vdd cla_4bit_g_fourth_u
+.ends cla_4bit_g
+
+********************************************************************************
+* Library          : hackathon
+* Cell             : CLA_4bit_g_tb
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+v56 b0 gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 3u 5u )
+v51 b1 gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 3u 6u )
+v50 b2 gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 3u 5u )
+v49 b3 gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 3u 5u )
+v48 co gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 3u 4u )
+v57 a3 gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 3u 6u )
+v58 a2 gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 3u 7u )
+v59 a1 gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 3u 6u )
+v60 a0 gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 3u 4u )
+c40 s1 gnd! c=1p
+c42 carry gnd! c=1p
+c38 s3 gnd! c=1p
+c39 s2 gnd! c=1p
+c41 s0 gnd! c=1p
+v35 net70 gnd! dc=1.2
+xi34 a0 a1 a2 a3 b0 b1 b2 b3 co net68 net65 net63 net50 carry gnd! s0 s1 s2 s3
++ net70 cla_4bit_g
+
+
+
+
+
+
+
+
+.tran '1u' '50u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(a0) v(a1) v(a2) v(a3) v(b0) v(b1) v(b2) v(b3) v(carry) v(s0) v(s1)
++ v(s2) v(s3) v(co)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
