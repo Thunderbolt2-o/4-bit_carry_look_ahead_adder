@@ -204,7 +204,7 @@ Refer to the netlist of the circuits here: <a href='/files/netlist.txt'> Netlist
 
  - [Dr. Sivasundar Manisankar, Assistant Professor (Senior Grade), Assistant Professor (Senior Grade)](https://www.linkedin.com/in/dr-sivasundar-manisankar-51872946/) 
  - [Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
- - [Cloud Based Analog IC Design Hackathon](https://www.th.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/')
+ - [Cloud Based Analog IC Design Hackathon](https://www.th.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
  - [Synopsys India](https://www.synopsys.com/)
  - [Sameer Durgoji, NIT Karnataka](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
  - [Chinmay panda, IIT Hyderabad](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
