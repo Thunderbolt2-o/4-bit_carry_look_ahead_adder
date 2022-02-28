@@ -53,7 +53,7 @@ The equations of propagate, generate, sum and carry signal are going to repeat f
 <p align="center">
 <img width="600"
      height="500"
-  src="files/wallace_tree_mul.png"><br />
+  src="files/BLOCK%20DIAGRAM.png"><br />
   REFERENCE CIRCUIT<br />
 </p>
 
