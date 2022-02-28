@@ -4,17 +4,17 @@ This repository presents the design of 4-bit CLA adder implemented using Synopsi
 ##  Table Of Content
    * [Abstract](#Abstract)
    * [Detailed Explanation](#Detailed-Explanation)
-   * [Reference Circuit block diagram](#Reference-Circuit)
+   * [Reference Circuit block diagram](#Reference-Circuit-block-diagram)
    * [Tools Used](#Tools-Used)
    * [CMOS AND Gate](#CMOS-AND-Gate)
    * [CMOS OR Gate](#CMOS-OR-Gate)
    * [CMOS NOT Gate](#CMOS-NOT-Gate)
-   * [CMOS XOR Gate](#XOR-Gate)
+   * [XOR Gate](#XOR-Gate)
    * [Half Adder Module](#Half-Adder-Module)
    * [Full Adder Module](#Full-Adder-Module)
-   * [Approch for the design](#Approach)
-   * [First carry generator](#First_carry)
-   * [Second carry generator](#Second_carry)
+   * [Approch for the design](#Approch-for-the-design)
+   * [First carry generator](#First-carry-generator)
+   * [Second carry generator](#Second-carry-generator)
    * [Third carry generator](#Third_carry)
    * [Final carry generator](#Fourth_carry)
    * [Combining blocks](#Final_circuit)
@@ -54,7 +54,7 @@ The equations of propagate, generate, sum and carry signal are going to repeat f
 <img width="600"
      height="500"
   src="files/BLOCK%20DIAGRAM.png"><br />
-  REFERENCE CIRCUIT<br />
+  REFERENCE CIRCUIT BLOCK DIAGRAM<br />
 </p>
 
 
