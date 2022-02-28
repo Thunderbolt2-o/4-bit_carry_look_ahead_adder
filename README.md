@@ -13,7 +13,7 @@ This repository presents the design of 4-bit CLA adder implemented using Synopsi
    * [OR Gate](#OR-Gate)
    * [Half Adder Module](#Half-Adder-Module)
    * [Full Adder Module](#Full-Adder-Module)
-   * [Approch for the design](#Approch-for-the-design)
+   * [Design Approach](#Design-Approach)
    * [First carry generator](#First-carry-generator)
    * [Second carry generator](#Second-carry-generator)
    * [Third carry generator](#Third-carry-generator)
