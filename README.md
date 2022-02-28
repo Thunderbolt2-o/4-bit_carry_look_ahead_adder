@@ -4,7 +4,7 @@ This repository presents the design of 4-bit CLA adder implemented using Synopsi
 ##  Table Of Content
    * [Abstract](#Abstract)
    * [Detailed Explanation](#Detailed-Explanation)
-   * [Reference Circuit](#Reference-Circuit)
+   * [Reference Circuit block diagram](#Reference-Circuit)
    * [Tools Used](#Tools-Used)
    * [CMOS AND Gate](#CMOS-AND-Gate)
    * [CMOS OR Gate](#CMOS-OR-Gate)
