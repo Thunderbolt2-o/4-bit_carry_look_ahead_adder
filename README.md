@@ -177,8 +177,8 @@ These Partial products are passed to next layer for reduction. This layer uses o
 
 ## Simulations
 <p align="center">
-<img width="500"
-     height="500"
+<img width="300"
+     height="300"
   src="files/tb end.png"><br />
   Test bench for CLA Adder
 </p>
