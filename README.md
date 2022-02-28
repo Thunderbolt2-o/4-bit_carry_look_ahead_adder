@@ -31,19 +31,19 @@ A 28nM CMOS 4-bit Carry look Ahead Adder (CLA adder) is proposed. A ripple carry
 
 Fig.1 represents the block diagram for a 4 bit CLA adder, which is based on a ripple carry adder circuit with an additional propagation block. The carry bits are provided by a propagation block which reduces the time delay present in the ripple carry adder. This is achieved by converting all the carry signals such as C1, C2, C3 as a function of C0. The expression for the carry propagate Pi (1), generates signal Gi (2), sum (3), and carry out Ci+1 (4).
 
-Pi = Ai ⊕ Bi … (1)
-Gi = Ai . Bi … (2)
+Pi = Ai ⊕ Bi … (1) <br>
+Gi = Ai . Bi … (2)  <br>
 The output sum and carry can be expressed as
-Si = Pi ⊕ Ci … (3)
-Ci+1 = Gi + (Pi . Ci) … (4)
-Where i = 0,1,2…..n-1.
+Si = Pi ⊕ Ci … (3) <br>
+Ci+1 = Gi + (Pi . Ci) … (4) <br>
+Where i = 0,1,2…..n-1. 
 
 For 4 bit CLA the below equations are formed with the help of (1), (2), (3) and (4)
 
-C1 = G0 + P0C0 … (5)
-C2 = G1 + P1C1 = G1 + P1(G0 + P0C0) = G1 + P1G0 + P1P0C0 … (6)
-C3 = G2 + P2C2 = G2 + P2G1 + P2P1G0 + P2P1P0C0  … (7)
-C4 = G3 + P3C3 = G3 + P3G2 + P3P2G1 + P3P2P1G0 + P3P2P1 P0C0.  … (8)
+C1 = G0 + P0C0 … (5) <br>
+C2 = G1 + P1C1 = G1 + P1(G0 + P0C0) = G1 + P1G0 + P1P0C0 … (6) <br>
+C3 = G2 + P2C2 = G2 + P2G1 + P2P1G0 + P2P1P0C0  … (7) <br>
+C4 = G3 + P3C3 = G3 + P3G2 + P3P2G1 + P3P2P1G0 + P3P2P1 P0C0.  … (8) <br>
 
 The equations of propagate, generate, sum and carry signal are going to repeat for n number of bits such as for 8,16,32etc.
 
