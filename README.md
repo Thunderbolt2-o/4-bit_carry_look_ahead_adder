@@ -76,30 +76,30 @@ The equations of propagate, generate, sum and carry signal are going to repeat f
 ## CMOS NAND Gate
 
 <p align="center">
-  <img src="files/or gate.JPG" width="700" height="500" /><br />
+  <img src="files/Nand.png" width="700" height="500" /><br />
   NAND GATE SCHEMATIC<br />
   
 </p>
 
 
 
-## CMOS AND Gate
+## AND Gate
 <p align="center">
-  <img src="files/xor gate.JPG" width="700" height="500" /><br />
+  <img src="files/And.png" width="700" height="500" /><br />
   AND GATE SCHEMATIC<br />
   
 </p>
 
-## CMOS XOR Gate
+## XOR Gate
 <p align="center">
-  <img src="files/xor gate.JPG" width="700" height="500" /><br />
+  <img src="files/Xor.png" width="700" height="500" /><br />
   XOR GATE SCHEMATIC<br />
   
 </p>
 
-## CMOS OR Gate
+## OR Gate
 <p align="center">
-  <img src="files/xor gate.JPG" width="700" height="500" /><br />
+  <img src="files/Or.png" width="700" height="500" /><br />
   OR GATE SCHEMATIC<br />
   
 </p>
@@ -108,7 +108,7 @@ The equations of propagate, generate, sum and carry signal are going to repeat f
 <p align="center">
 <img width="800"
      height="500"
-  src="files/half adder.JPG"><br />
+  src="files/half adder.png"><br />
   HALF ADDER USING BASIC GATES <br />
 </p>
 
@@ -117,7 +117,7 @@ The equations of propagate, generate, sum and carry signal are going to repeat f
 <p align="center">
 <img width="800"
      height="600"
-  src="files/full adder.JPG"><br />
+  src="files/Full adder.png"><br />
  FULL ADDER USING HALF ADDERS <br />
 </p>
 
@@ -133,7 +133,7 @@ Now 4 carry generator blocks were build the inputs of these blocks were given to
 <p align="center">
 <img width="900"
      height="600"
-  src="files/stage1 reduction.JPG"><br />
+  src="files/carry 1.png"><br />
   First carry generator <br />
 </p>
 
@@ -142,7 +142,7 @@ Now 4 carry generator blocks were build the inputs of these blocks were given to
 <p align="center">
 <img width="900"
      height="600"
-  src="files/group 2.JPG"><br />
+  src="files/carry 2.png"><br />
   Second carry generator<br />
 </p>
 
@@ -154,7 +154,7 @@ These Partial products are passed to next layer for reduction. This layer uses o
 <p align="center">
 <img width="900"
      height="600"
-  src="files/group 3.JPG"><br />
+  src="files/carry 3.png"><br />
   Third carry generator<br />
 </p>
 
@@ -162,7 +162,7 @@ These Partial products are passed to next layer for reduction. This layer uses o
 <p align="center">
 <img width="1000"
      height="700"
-  src="files/group 4.JPG"><br />
+  src="files/carry 4.png"><br />
   Final carry generator<br />
 </p>
 
@@ -171,7 +171,7 @@ These Partial products are passed to next layer for reduction. This layer uses o
 <p align="center">
 <img width="1000"
      height="700"
-  src="files/group 5.JPG"><br />
+  src="files/full block.png"><br />
  Combining blocks<br />
 </p>
 
@@ -179,15 +179,20 @@ These Partial products are passed to next layer for reduction. This layer uses o
 <p align="center">
 <img width="1000"
      height="700"
-  src="files/group 7.JPG"><br />
-  Simulations
+  src="files/tb end.png"><br />
+  Test bench for CLA Adder
 </p>
  
+<p align="center">
+<img width="1000"
+     height="700"
+  src="files/output.png"><br />
+  Test bench for CLA Adder
+</p>
 
 ## Netlist
 
-Refer to the netlist of the circuits here: <a href='/files/transient_analysis.txt'> Netlist </a>
-
+Refer to the netlist of the circuits here: <a href='/files/netlist.txt'> Netlist </a>
 
 
 ## Author
