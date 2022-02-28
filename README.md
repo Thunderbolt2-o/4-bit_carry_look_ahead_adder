@@ -10,6 +10,7 @@ This repository presents the design of 4-bit CLA adder implemented using Synopsi
    * [CMOS NAND Gate](#CMOS-NAND-Gate)
    * [AND Gate](#AND-Gate)
    * [XOR Gate](#XOR-Gate)
+   * [OR Gate](#OR-Gate)
    * [Half Adder Module](#Half-Adder-Module)
    * [Full Adder Module](#Full-Adder-Module)
    * [Approch for the design](#Approch-for-the-design)
