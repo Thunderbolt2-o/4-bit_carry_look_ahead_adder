@@ -148,10 +148,6 @@ Now 4 carry generator blocks were build the inputs of these blocks were given to
 </p>
 
 ## Third carry generator
-
-In the below shown schematic, module generates partial product terms A6B and A7B.
-These Partial products are passed to next layer for reduction. This layer uses only Halfadders and Fulladders.
-
 <p align="center">
 <img width="900"
      height="600"
